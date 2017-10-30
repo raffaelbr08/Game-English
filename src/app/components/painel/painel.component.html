@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>Welcome</h1>
+  <div class="flex-content">
+    <div class="flex-item">
+      <app-progresso [progresso]="progresso"></app-progresso>
+    </div>
+    <div class="flex-item">
+      <app-tentativas [tentativas]="tentativas"></app-tentativas>
+    </div>
+  </div>
+  <h3>Traduza a frase:</h3>
+  <p>{{rodadaFrase.fraseEng}}</p>
+
+  <textarea class="text-area" name="" rows="6" (input)="atualizaResposta($event)" [value]="resposta"></textarea>
+  <button (click)="verificarResposta()">Verificar</button>
+
+</div>
